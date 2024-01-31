@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
-* {
+body {
     font-family: 'Rubik', sans-serif;
+    margin: 0;
 }
 
 @media (max-width: 675px) {
@@ -12,12 +13,20 @@
         align-items: center;
     }
 
+    #logo {
+        margin-left: 12px;
+        margin-top: 20px;
+    }
+
     #hamburger-button {
+        margin-right: 12px;
+        margin-top: 20px;
         border: none;
         background: transparent;
     }
     
     #dropdown-content {
+        z-index: 1;
         width: 100%;
         height: 100%;
         display: none;
@@ -25,7 +34,6 @@
         justify-content: space-between;
         align-items: center;
         position: absolute;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 2);
         background-color: hsl(229, 40%, 21%, 0.9);
     }
     
@@ -45,27 +53,30 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-top: 20px;
     }
     #dropdown-menu-header button {
         background: transparent;
         border: none;
-        margin: 9px 15px 0px 0px;
+        margin: 9px 35px 0px 0px;
     }
     #dropdown-menu-header > img:first-of-type {
-        margin: 9px 0px 0px 15px;
+        margin: 9px 0px 0px 35px;
     }
     #dropdown-menu-options {
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         align-items: center;
-        font-size: 30px;
+        font-size: 22px;
+        margin-top: 42px;
     }
     #dropdown-menu-options hr {
         width: 80%;
         border: 1px solid hsl(229, 8%, 60%, 0.3);
+        margin: 10px;
     }
     #dropdown-menu-options > button:first-of-type {
         height: 12%;
@@ -76,9 +87,379 @@
         color: white;
         font-weight: bold;
         font-size: 25px;
+        margin-top: 15px;
     }
-    #dropdown-menu-footer img{
-        width: 30px;
-        margin: 5px;
+    #dropdown-menu-footer {
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
     }
+    #dropdown-menu-footer a {
+        margin: 0px 15px 0px 15px;
+    }
+
+    #dropdown-menu-footer a > *{
+        width: 25px;
+    }
+
+    #hero {
+        display: flex;
+        justify-content: flex-end;
+    }
+    #img-background {
+        display: flex;
+        align-items: flex-end;
+        margin-top: 120px;
+        width: 280px;
+        height: 170px;
+        background: hsl(231, 69%, 60%);
+        border-radius: 50% 0% 0% 30%;
+    }
+    #img-background > :first-child {
+        width: 320px;
+        position: absolute;
+        right: 20px;
+    }
+    #landing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #landing h2 {
+        width: 80%;
+        margin: 10% 0 2% 0;
+    }
+    #landing p {
+        color: hsl(229, 8%, 60%);
+        width: 80%;
+        margin: 5% 0 5% 0;
+    }
+    #landing-buttons button {
+        width: 130px;
+        height: 50px;
+        border: none;
+        border-radius: 3px;
+        margin: 30% 5px 5% 5px;
+    }
+    #landing-buttons > button:nth-child(1) {
+        background-color: hsl(231, 69%, 60%);
+        color: white;    
+    }
+    #landing-buttons > button:nth-child(2) {
+        background-color: white;
+        color: hsl(229, 8%, 60%);
+        box-shadow: 0px 1px 5px 0px hsl(229, 8%, 60%);
+    }
+    #heading-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #features {
+        margin-top: 20px;
+        height: 100%;
+    }
+    #features h2{
+        width: 80%;
+        margin: 10% 0 2% 0;
+    }
+    #features p {
+        color: hsl(229, 8%, 60%);
+        width: 80%;
+        margin: 5% 0 5% 0;
+    }
+    #frame {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #frame hr {
+        width: 80%;
+        border: 1px solid hsl(229, 8%, 60%, 0.3);
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+    #frame input {
+        border: none;
+        background-color: white;
+        font-size: 17px;
+        font-family:'Rubik', sans-serif;
+        margin-bottom: 20px;
+    }
+    #frame input + hr {
+        display: none;
+    }
+    #frame input:hover + hr {
+        display: flex;
+        margin: 0px;
+        width: 30%;
+        border-width: 2px;
+        background-color: hsl(0, 94%, 66%);
+    }
+    #frame {
+        margin: 0 auto;
+        width: 800px;
+        max-width: 100%;
+        text-align: center;
+    }
+    #frame label {
+        cursor: pointer;
+        text-decoration: none;
+    }
+    #slides {
+        position: relative;
+        z-index: 1;
+    }
+    #overflow {
+        width: 100%;
+        overflow: hidden;
+    }
+    #frame1:hover~#slides .inner {
+        margin-left: 0;
+    }
+    #frame2:hover~#slides .inner {
+        margin-left: -100%;
+    }
+    #frame3:hover~#slides .inner {
+        margin-left: -200%;
+    }
+    #slides .inner {
+        transition: margin-left 800ms
+            cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        width: 400%;
+        line-height: 0;
+        height: 300px;
+    }
+    #slides .frame {
+        width: 25%;
+        float: left;
+        display: flex;
+        flex-direction: column;
+    }
+    #frame1:hover~#controls label:nth-child(2),
+    #frame2:hover~#controls label:nth-child(3),
+    #frame3:hover~#controls label:nth-child(1) {
+        float: right;
+        margin: 0 -50px 0 0;
+        display: block;
+    }
+    #frame1:hover~#controls label:nth-child(2),
+    #frame2:hover~#controls label:nth-child(3),
+    #frame3:hover~#controls label:nth-child(1) {
+        float: right;
+        margin: 0 0 0 -50px;
+        display: block;
+    }
+    #sec-background {
+        display: flex;
+        align-items: flex-end;
+        margin-top: 80px;
+        width: 280px;
+        height: 170px;
+        background: hsl(231, 69%, 60%);
+        border-radius: 0% 30% 50% 0%;
+    }
+    #sec-background img {
+        width: 270px;
+        position: relative;
+        left: 60px;
+        bottom: 35px;
+    }
+    #thd-background {
+        display: flex;
+        align-items: flex-end;
+        margin-top: 80px;
+        width: 280px;
+        height: 170px;
+        background: hsl(231, 69%, 60%);
+        border-radius: 0% 30% 50% 0%;
+    }
+    #thd-background img {
+        width: 270px;
+        position: relative;
+        left: 50px;
+        bottom: 10px;
+    }
+    #fth-background {
+        display: flex;
+        align-items: flex-end;
+        margin-top: 80px;
+        width: 280px;
+        height: 170px;
+        background: hsl(231, 69%, 60%);
+        border-radius: 0% 30% 50% 0%;
+    }
+    #fth-background img {
+        width: 270px;
+        position: relative;
+        left: 50px;
+        bottom: 10px;
+    }
+    .frame-content {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+    #endline h2 {
+        margin-bottom: 40px;
+    }
+    #endline2 h2 {
+        margin-bottom: 40px;
+    }
+    #endline3 h2 {
+        margin-bottom: 40px;
+    }
+    .endl {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+    }
+    #endline p {
+        color: hsl(229, 8%, 60%);
+        width: 100%;
+        margin: 10px 0 10px 0;
+        text-align: center;
+    }
+    #endline2 p {
+        color: hsl(229, 8%, 60%);
+        width: 100%;
+        margin: 10px 0 10px 0;
+        text-align: center;
+    }
+    #endline3 p {
+        color: hsl(229, 8%, 60%);
+        width: 100%;
+        margin: 10px 0 10px 0;
+        text-align: center;
+    }
+    .endl button{
+        margin-top: 20px;
+        width: 95px;
+        height: 40px;
+        border: none;
+        border-radius: 3px;
+        margin: 5% 5px 5% 5px;
+        background-color: hsl(231, 69%, 60%);
+        color: white;
+    }
+    #linking {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #lk-headline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #lk-headline h2 {
+        margin: 10% 0 2% 0;
+    }
+    #lk-headline p {
+        color: hsl(229, 8%, 60%);
+        width: 80%;
+        margin: 5% 0 5% 0;
+        text-align: center;
+    }
+    .link {
+        box-shadow: 2px 2px 10px 1px rgba(143, 143, 143, 0.401);
+        border-radius: 5%;
+        margin: 30px;
+        width: 200px;
+        height: 300px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .link img {
+        width: 94px;
+        height: 92px;
+    }
+    .link p {
+        width: 80%;
+        color: hsl(229, 8%, 60%);
+    }
+    .link button {
+        border: none;
+        height: 40px;
+        width: 180px;
+        background-color: hsl(231, 69%, 60%);
+        color: white;
+        border-radius: 4px;
+    }
+    .link hr {
+        width: 100%;
+        border-style: dotted;
+        position: relative;
+        right: 5px;
+        border-color: hsl(229, 8%, 60%);
+        border-width: 3px 0px 0px 0px;
+        padding: 5px;
+    }
+    #faq {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #faq-headline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #faq-headline p {
+        width: 80%;
+        color: hsl(229, 8%, 60%);
+    }
+    #faq-content {
+        margin: 25px;
+        width: 80%;
+    }
+    #faq-content div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #faq button {
+        width: 95px;
+        height: 40px;
+        border: none;
+        border-radius: 3px;
+        margin: 5% 5px 5% 5px;
+        background-color: hsl(231, 69%, 60%);
+        color: white;
+    }
+    .block .answer {
+        display: none;
+    }
+    .block div:nth-child(1) {
+        display: none;
+    }
+    .arrow{
+        padding: 5px 3px 3px 5px;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+    }
+    .arrow:hover{
+        background-color: rgb(224, 223, 223);
+    }
+    .question {
+        width: 90%;
+    }
+    .answer p {
+        display: none;
+      }
+      #footer-top {
+        background-color: hsl(231, 69%, 60%);
+      }
 }
