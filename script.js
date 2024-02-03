@@ -6,10 +6,6 @@ const closeMenuButton = document.getElementById("close-menu");
 const logo = document.getElementById("logo");
 const closeB = document.getElementById("close-menu");
 
-console.log(hamburgerButton);
-console.log(dropdownContent);
-console.log(logo);
-
 function dropdown() {
     if(dropdownContent.style.display == "flex") {
         logo.style.display = "block";

@@ -2,6 +2,7 @@
 
 * {
     font-family: 'Rubik', sans-serif;
+    margin: 0;
 }
 
 @media (max-width: 675px) {
@@ -80,5 +81,77 @@
     #dropdown-menu-footer img{
         width: 30px;
         margin: 5px;
+    }
+    #footer-top {
+        background-color: hsl(231, 69%, 60%);
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #textlines {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+    #textlines p {
+        color: white;
+        letter-spacing: 2px;
+        text-align: center;
+        margin: 5px;
+    }
+    #textlines h3 {
+        margin: 10px 5px 5px 5px;
+        text-align: center;
+        color: white;
+    }
+    #inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #inputs input {
+        margin-top: 40px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 11px;
+        color: hsl(229, 8%, 60%);
+        width: 190px;
+    }
+    #inputs button {
+        margin-bottom: 5px;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 11px;
+        width: 210px;
+        background-color: hsl(0, 94%, 66%);
+        color: white;
+    }
+    #footer-bot {
+        background-color: hsl(229, 31%, 21%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #footer-bot img {
+        margin: 20px;
+    }
+    #footer-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    #footer-menu a {
+        margin: 20px;
+        text-decoration: none;
+        color: white;
+    }
+    #footer-socials img{
+        margin: 20px 7px 20px 7px;
     }
 }
